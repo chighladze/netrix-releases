@@ -12,6 +12,8 @@ The current Windows x64 beta, **0.3.0-beta.5**, is available (approximately 225 
 
 This beta is unsigned. On the Windows 10 Pro test computer, launch required manual WebView2 recovery; SSH, SFTP browsing and file download without interrupting SSH then passed. Offline installation from an absent-runtime baseline, lock/unlock, restart/persistence, uninstall/reinstall and the full failure-path matrix remain unverified for this exact beta. Back up your existing workspace and keep its master password before replacing an installation. See [all releases](https://github.com/chighladze/netrix-releases/releases) for version history.
 
+Some Windows computers also need a separate Microsoft Visual C++ x64 runtime installation for beta.5. See [installation help](#installation-help) if the backend terminates before your workspace opens.
+
 Each Windows release provides:
 
 - One NSIS `.exe` installer for Windows x64.
@@ -31,6 +33,8 @@ Get-FileHash -Algorithm SHA256 -LiteralPath '.\Netrix_<version>_x64-setup.exe'
 Compare the result with `installer-hashes.sha256` from the same release. Read its notes for the exact signing and testing status. Unsigned beta builds are explicitly marked as prereleases and may show a Windows unknown-publisher warning. A checksum verifies the downloaded bytes; it is not a publisher signature.
 
 ## Installation help
+
+**Backend terminated with `-1073741515` / `0xC0000135`:** Windows could not load a required DLL. Beta.5's backend requires `VCRUNTIME140.dll`, and this prerequisite is not installed by the Netrix installer. Close Netrix, install or repair the official [Microsoft Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe), restart Windows if Microsoft's installer requests it, then reopen Netrix. The owner confirmed that this removed the reported backend error on another test computer. Keep your Netrix workspace and vault intact. If the error persists, report the exact message; this Windows status can also refer to other missing DLLs.
 
 **Missing WebView2:** if Netrix reports `Could not find the WebView2 Runtime`, close Netrix and install **Evergreen Standalone Installer — x64** from [Microsoft's official WebView2 page](https://developer.microsoft.com/en-us/microsoft-edge/webview2/). Confirm that the runtime installer is published by Microsoft, then reopen Netrix under the same Windows user. Keep your Netrix data and vault intact; deleting hosts, app data or resetting your password is not needed. This recovery restored launch on the computer reported by the owner. Beta.5 includes the full runtime installer, but a broken existing runtime registration can still cause it to skip installation. Automatic recovery from this condition is not fixed in beta.5. If Microsoft's installer fails or says the runtime is already installed, retain its exact message and report the issue.
 
