@@ -4,13 +4,13 @@ Official Windows installers, release notes, checksums and issue reports for [Net
 
 ## Download
 
-The first public Windows x64 beta, **0.3.0-beta.4**, is available:
+The current Windows x64 beta, **0.3.0-beta.5**, is available (approximately 225 MB, including the full Microsoft WebView2 installer):
 
-- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.4/Netrix_0.3.0-beta.4_x64-setup.exe).
-- [Read release notes, testing scope and known limitations](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.4).
-- [Download its SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.4/installer-hashes.sha256).
+- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.5/Netrix_0.3.0-beta.5_x64-setup.exe).
+- [Read release notes, testing scope and known limitations](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.5).
+- [Download its SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.5/installer-hashes.sha256).
 
-This beta is unsigned. Existing-profile installation and basic SSH/SFTP, locking and restart checks passed; clean-profile installation and the full manual matrix remain unverified. Back up your existing workspace and keep its master password before replacing an installation. See [all releases](https://github.com/chighladze/netrix-releases/releases) for version history.
+This beta is unsigned. On the Windows 10 Pro test computer, launch required manual WebView2 recovery; SSH, SFTP browsing and file download without interrupting SSH then passed. Offline installation from an absent-runtime baseline, lock/unlock, restart/persistence, uninstall/reinstall and the full failure-path matrix remain unverified for this exact beta. Back up your existing workspace and keep its master password before replacing an installation. See [all releases](https://github.com/chighladze/netrix-releases/releases) for version history.
 
 Each Windows release provides:
 
@@ -32,9 +32,9 @@ Compare the result with `installer-hashes.sha256` from the same release. Read it
 
 ## Installation help
 
-**Missing WebView2:** if Netrix reports `Could not find the WebView2 Runtime`, close Netrix and install **Evergreen Standalone Installer — x64** from [Microsoft's official WebView2 page](https://developer.microsoft.com/en-us/microsoft-edge/webview2/). Confirm that the runtime installer is published by Microsoft, then reopen Netrix under the same Windows user. Keep your Netrix data and vault intact; deleting hosts, app data or resetting your password is not needed. This recovery restored launch on the computer reported by the owner. Beta.4 embeds the online WebView2 downloader; the next installer will be tested with the full offline runtime package before publication.
+**Missing WebView2:** if Netrix reports `Could not find the WebView2 Runtime`, close Netrix and install **Evergreen Standalone Installer — x64** from [Microsoft's official WebView2 page](https://developer.microsoft.com/en-us/microsoft-edge/webview2/). Confirm that the runtime installer is published by Microsoft, then reopen Netrix under the same Windows user. Keep your Netrix data and vault intact; deleting hosts, app data or resetting your password is not needed. This recovery restored launch on the computer reported by the owner. Beta.5 includes the full runtime installer, but a broken existing runtime registration can still cause it to skip installation. Automatic recovery from this condition is not fixed in beta.5. If Microsoft's installer fails or says the runtime is already installed, retain its exact message and report the issue.
 
-**Unknown publisher / SmartScreen:** beta.4 is unsigned, so Windows or the browser may warn about its publisher or download reputation. Verify the official release and checksum. Do not disable Windows protection or add blanket exclusions. A named malware detection is a separate issue; report its exact detection name and the installer hash without uploading private workspace files. Trusted code signing is planned, but [Microsoft notes](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation) that new signed files can still show reputation warnings.
+**Unknown publisher / SmartScreen:** beta.5 is unsigned, so Windows or the browser may warn about its publisher or download reputation. Verify the official release and checksum. Do not disable Windows protection or add blanket exclusions. A named malware detection is a separate issue; report its exact detection name and the installer hash without uploading private workspace files. Trusted code signing is planned, but [Microsoft notes](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation) that new signed files can still show reputation warnings. Microsoft's signature on the bundled WebView2 installer does not sign Netrix.
 
 ## Bugs and requests
 
