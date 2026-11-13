@@ -4,7 +4,13 @@ Official Windows installers, release notes, checksums and issue reports for [Net
 
 ## Download
 
-Download installers from [Releases](https://github.com/chighladze/netrix-releases/releases). The first Windows candidate is currently being validated; an installer will appear after its release is published.
+The first public Windows x64 beta, **0.3.0-beta.4**, is available:
+
+- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.4/Netrix_0.3.0-beta.4_x64-setup.exe).
+- [Read release notes, testing scope and known limitations](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.4).
+- [Download its SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.4/installer-hashes.sha256).
+
+This beta is unsigned. Existing-profile installation and basic SSH/SFTP, locking and restart checks passed; clean-profile installation and the full manual matrix remain unverified. Back up your existing workspace and keep its master password before replacing an installation. See [all releases](https://github.com/chighladze/netrix-releases/releases) for version history.
 
 Each Windows release provides:
 
