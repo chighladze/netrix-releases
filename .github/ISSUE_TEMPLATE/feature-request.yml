@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest an improvement to a Netrix workflow.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing requests first. Describe your workflow using examples that contain no credentials or private host details.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the task and what currently makes it difficult.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed improvement
+      description: Explain how you would expect the feature to work.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or current workaround
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Optional examples, sketches or links that help explain the request.

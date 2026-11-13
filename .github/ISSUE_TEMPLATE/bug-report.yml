@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a problem with Netrix or its Windows installer.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues before reporting a new problem.
+        Reports are public. Remove passwords, tokens, private keys and private host details from any text, screenshots or logs.
+  - type: input
+    id: version
+    attributes:
+      label: Netrix version
+      description: Copy the version from About. For a website issue, enter "website".
+      placeholder: Exact version, including any beta suffix
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system
+      description: Include your Windows edition and build. For website issues, also include the browser and version.
+      placeholder: Windows edition and build
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Installer or startup
+        - SSH, Telnet or Serial
+        - Terminal tabs or panes
+        - SFTP or files
+        - Hosts or folders
+        - Vault or encrypted storage
+        - Tunnels or network tools
+        - Website or documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Describe the smallest sequence that causes the problem, using example host names and test data.
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include the exact error message, if one appears.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional context or redacted screenshots
+      description: Optional. Attach only the relevant, redacted excerpt; do not upload your workspace database or vault files.

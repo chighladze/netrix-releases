@@ -26,7 +26,12 @@ Compare the result with `installer-hashes.sha256` from the same release. Read it
 
 ## Bugs and requests
 
-Use [Issues](https://github.com/chighladze/netrix-releases/issues) for bug reports and feature requests. For a bug, include the Netrix version, Windows version, steps to reproduce, expected result and actual result. Remove passwords, tokens, private keys, personal data and private server details from screenshots or logs before posting.
+Search [existing issues](https://github.com/chighladze/netrix-releases/issues), then use the appropriate form:
+
+- [Report a bug](https://github.com/chighladze/netrix-releases/issues/new?template=bug-report.yml): include the Netrix version, Windows version, steps to reproduce, expected result and actual result.
+- [Request a feature](https://github.com/chighladze/netrix-releases/issues/new?template=feature-request.yml): describe the problem, proposed improvement and any current workaround.
+
+Reports are public. Remove passwords, tokens, private keys, personal data and private server details from screenshots or logs before posting. Do not upload workspace databases or vault files. Fixes remain in the private application repository; public release notes describe the changes delivered to users.
 
 ## License
 

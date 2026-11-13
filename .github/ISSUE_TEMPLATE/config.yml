@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Netrix documentation
+    url: https://netrix-console.com/docs
+    about: Read the getting-started and product documentation.
