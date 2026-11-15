@@ -22,7 +22,7 @@ Each Windows release provides:
 - `installer-hashes.sha256`, containing the checksum of that exact installer.
 - `release.json`, recording version, filename, size, checksum, signing status and source commit.
 
-Choose the EXE under **Assets**. GitHub's automatically generated **Source code** ZIP/TAR archives contain this distribution repository's documentation, not the Netrix application or its installer. Application source and build logs are maintained separately.
+Choose the EXE under **Assets**. GitHub's automatically generated **Source code** ZIP/TAR archives contain this distribution repository's documentation, not the Netrix application or its installer. The complete application source and build/customization guides are available in [netrix-desktop](https://github.com/chighladze/netrix-desktop).
 
 ## Verify a download
 
@@ -44,6 +44,16 @@ Compare the result with `installer-hashes.sha256` from the same release. Read it
 
 **Unknown publisher / SmartScreen:** Netrix beta builds are unsigned, so Windows or the browser may warn about its publisher or download reputation. Verify the official release and checksum. Do not disable Windows protection or add blanket exclusions. A named malware detection is a separate issue; report its exact detection name and the installer hash without uploading private workspace files. Trusted code signing is planned, but [Microsoft notes](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation) that new signed files can still show reputation warnings. Microsoft's signature on the bundled WebView2 installer does not sign Netrix.
 
+## Source and customization
+
+The public [Netrix desktop project](https://github.com/chighladze/netrix-desktop) contains the application source under MIT. Fork it to build and customize your own version.
+
+- [Build and run from source](https://github.com/chighladze/netrix-desktop/blob/main/docs/build_instructions.md).
+- [Customize Netrix](https://github.com/chighladze/netrix-desktop/blob/main/docs/CUSTOMIZATION.md).
+- [Contribute a change](https://github.com/chighladze/netrix-desktop/blob/main/CONTRIBUTING.md).
+
+Use this releases repository for ready-made installers and existing bug reports. Source archives downloaded from netrix-desktop contain application code; source archives here contain distribution documentation.
+
 ## Bugs and requests
 
 Search [existing issues](https://github.com/chighladze/netrix-releases/issues), then use the appropriate form:
@@ -51,7 +61,7 @@ Search [existing issues](https://github.com/chighladze/netrix-releases/issues), 
 - [Report a bug](https://github.com/chighladze/netrix-releases/issues/new?template=bug-report.yml): include the Netrix version, Windows version, steps to reproduce, expected result and actual result.
 - [Request a feature](https://github.com/chighladze/netrix-releases/issues/new?template=feature-request.yml): describe the problem, proposed improvement and any current workaround.
 
-Reports are public. Remove passwords, tokens, private keys, personal data and private server details from screenshots or logs before posting. Do not upload workspace databases or vault files. Fixes remain in the private application repository; public release notes describe the changes delivered to users.
+Reports are public. Remove passwords, tokens, private keys, personal data and private server details from screenshots or logs before posting. Do not upload workspace databases or vault files. Application source and pull requests are available in [netrix-desktop](https://github.com/chighladze/netrix-desktop); public release notes describe the changes delivered to users.
 
 ## License
 
