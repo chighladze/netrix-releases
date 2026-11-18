@@ -4,17 +4,17 @@ Official Windows installers, release notes, checksums and issue reports for [Net
 
 ## Download
 
-The current Windows x64 beta, **0.3.0-beta.8**, is available (approximately 225 MB, including the full Microsoft WebView2 installer):
+The current Windows x64 prerelease is **0.3.0-beta.9**.
 
-- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.8/Netrix_0.3.0-beta.8_x64-setup.exe).
-- [Read release notes, testing scope and known limitations](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.8).
-- [Download its SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.8/installer-hashes.sha256).
+- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.9/Netrix_0.3.0-beta.9_x64-setup.exe).
+- [Read the release notes and Windows test results](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.9).
+- [Download the SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.9/installer-hashes.sha256).
 
-This beta is unsigned and may display a Windows unknown-publisher warning. It removes the known dependency on a separately installed Visual C++ package, adds startup recovery guidance and copyable diagnostics, and attempts offline WebView2 recovery during setup. Setup stops if recovery fails.
+After a crash, Netrix waits briefly for the previous process to release the encrypted workspace. Immediate restart passed with Windows Job Object assignment denied. You can preview a problem report in Help or on the startup error screen. This installer is unsigned and Windows may warn about its publisher.
 
-Automated checks passed, but installation on clean Windows without Visual C++ has not been tested. Missing-WebView2 offline installation, desktop lock/unlock, restart/persistence, upgrade/uninstall and SSH/SFTP GUI acceptance remain unverified for this exact beta. Back up your existing workspace and keep its master password before upgrading. See [release notes](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.8) for the exact validation scope and [all releases](https://github.com/chighladze/netrix-releases/releases) for version history.
+The installed beta passed clean-profile setup, an in-place upgrade from beta.8, SSH and SFTP, terminal detach and return, and Vault lock and unlock. On clean Windows 10 LTSC without a network adapter, Setup supplied the missing WebView2 runtime and Netrix reopened the saved workspace after restart. Back up your workspace and keep its master password before upgrading. [All releases](https://github.com/chighladze/netrix-releases/releases).
 
-Installer: 225,425,062 bytes. SHA-256: `58f92df91599640f90e8ef9e7713f00eb346bebbb3732a9738d8879b2f7004dc`. All three public release assets were downloaded and their complete checksums verified. This confirms download integrity, not clean-Windows compatibility.
+The installer is 225,459,245 bytes. Its SHA-256 is `b70bfe67eac2eb336952465f41abc9bd0118c8c2495ef9614ab7757af8132b5c`.
 
 Each Windows release provides:
 
