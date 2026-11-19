@@ -4,17 +4,17 @@ Official Windows installers, release notes, checksums and issue reports for [Net
 
 ## Download
 
-The current Windows x64 prerelease is **0.3.0-beta.9**.
+The current Windows x64 prerelease is **0.3.0-beta.10**.
 
-- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.9/Netrix_0.3.0-beta.9_x64-setup.exe).
-- [Read the release notes and Windows test results](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.9).
-- [Download the SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.9/installer-hashes.sha256).
+- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.10/Netrix_0.3.0-beta.10_x64-setup.exe).
+- [Read the release notes and Windows test results](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.10).
+- [Download the SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.10/installer-hashes.sha256).
 
-After a crash, Netrix waits briefly for the previous process to release the encrypted workspace. Immediate restart passed with Windows Job Object assignment denied. You can preview a problem report in Help or on the startup error screen. This installer is unsigned and Windows may warn about its publisher.
+Choose **Import SSH config** on the **Add your first host** screen to preview OpenSSH entries and select the hosts to save.
 
-The installed beta passed clean-profile setup, an in-place upgrade from beta.8, SSH and SFTP, terminal detach and return, and Vault lock and unlock. On clean Windows 10 LTSC without a network adapter, Setup supplied the missing WebView2 runtime and Netrix reopened the saved workspace after restart. Back up your workspace and keep its master password before upgrading. [All releases](https://github.com/chighladze/netrix-releases/releases).
+On Windows 10 LTSC x64 with WebView2 present and networking disconnected, a standard user upgraded from beta.9, then imported a selected host into a fresh workspace and reopened it after restart. This installer includes the full WebView2 runtime and is unsigned. Windows may warn about the publisher. [All releases](https://github.com/chighladze/netrix-releases/releases).
 
-The installer is 225,459,245 bytes. Its SHA-256 is `b70bfe67eac2eb336952465f41abc9bd0118c8c2495ef9614ab7757af8132b5c`.
+The installer is 225,462,519 bytes. Its SHA-256 is `5d65301e7b6078a44dd036100a65ac30b14272d8cd7bf36796ba38e4dbf0b07b`.
 
 Each Windows release provides:
 
