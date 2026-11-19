@@ -4,32 +4,31 @@ Official Windows installers, release notes, checksums and issue reports for [Net
 
 ## Download
 
-The current Windows x64 prerelease is **0.3.0-beta.10**.
+The current Windows x64 prerelease is **0.3.0-beta.11**.
 
-- [Download the Windows installer](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.10/Netrix_0.3.0-beta.10_x64-setup.exe).
-- [Read the release notes and Windows test results](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.10).
-- [Download the SHA-256 manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.10/installer-hashes.sha256).
+**[Download Lightweight for Windows x64 (9.3 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.11/Netrix_0.3.0-beta.11_x64-lightweight-setup.exe)** · [Offline Full with WebView2 (225.5 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.11/Netrix_0.3.0-beta.11_x64-offline-full-setup.exe)
+
+Choose **Lightweight** for most PCs. It uses the installed WebView2 runtime and downloads it from Microsoft if needed. Choose **Offline Full** for a disconnected PC. It includes the complete runtime. Both installers install the same Netrix application.
 
 Choose **Import SSH config** on the **Add your first host** screen to preview OpenSSH entries and select the hosts to save.
 
-On Windows 10 LTSC x64 with WebView2 present and networking disconnected, a standard user upgraded from beta.9, then imported a selected host into a fresh workspace and reopened it after restart. This installer includes the full WebView2 runtime and is unsigned. Windows may warn about the publisher. [All releases](https://github.com/chighladze/netrix-releases/releases).
+On Windows 10 LTSC x64, Lightweight upgraded beta.10 offline with WebView2 present and installed WebView2 on a connected PC where it was missing. Offline Full installed WebView2 without a network adapter. All three tests ran under a standard user account and found the saved host after restarting Netrix. Both Netrix installers are unsigned. [Release notes and Windows test results](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.11)
 
-The installer is 225,462,519 bytes. Its SHA-256 is `5d65301e7b6078a44dd036100a65ac30b14272d8cd7bf36796ba38e4dbf0b07b`.
+| Installer | Bytes | SHA-256 |
+| --- | ---: | --- |
+| Lightweight | 9,339,797 | `2a91e59ad8d4005fb7875f5c1cc90c8a2b5ec11caaa2fcdf42c52b925fb7ba72` |
+| Offline Full | 225,462,504 | `4a85a79936a837986d42cfbe97f7d55bc7ff535e3a38878ed321f01a55d1eb98` |
 
-Each Windows release provides:
-
-- One NSIS `.exe` installer for Windows x64.
-- `installer-hashes.sha256`, containing the checksum of that exact installer.
-- `release.json`, recording version, filename, size, checksum, signing status and source commit.
+[Checksum manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.11/installer-hashes.sha256) · [Release metadata](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.11/release.json) · [All releases](https://github.com/chighladze/netrix-releases/releases)
 
 Choose the EXE under **Assets**. GitHub's automatically generated **Source code** ZIP/TAR archives contain this distribution repository's documentation, not the Netrix application or its installer. The complete application source and build/customization guides are available in [netrix-desktop](https://github.com/chighladze/netrix-desktop).
 
 ## Verify a download
 
-Run this in PowerShell, replacing the filename with the downloaded EXE:
+In PowerShell, use the filename of the EXE you downloaded.
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Netrix_<version>_x64-setup.exe'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Netrix_0.3.0-beta.11_x64-lightweight-setup.exe'
 ```
 
 Compare the result with `installer-hashes.sha256` from the same release. Read its notes for the exact signing and testing status. Unsigned beta builds are explicitly marked as prereleases and may show a Windows unknown-publisher warning. A checksum verifies the downloaded bytes; it is not a publisher signature.
