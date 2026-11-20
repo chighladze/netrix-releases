@@ -1,34 +1,37 @@
 # Netrix releases
 
-Official Windows installers, release notes, checksums and issue reports for [Netrix](https://netrix-console.com), a local desktop terminal and connection manager.
+Official Windows installers, Portable ZIP, release notes, checksums and issue reports for [Netrix](https://netrix-console.com), a local desktop terminal and connection manager.
 
 ## Download
 
-The current Windows x64 prerelease is **0.3.0-beta.12**.
+The current Windows x64 prerelease is **0.3.0-beta.13**.
 
-**[Download Lightweight for Windows x64 (9.3 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.12/Netrix_0.3.0-beta.12_x64-lightweight-setup.exe)** · [Offline Full with WebView2 (225.5 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.12/Netrix_0.3.0-beta.12_x64-offline-full-setup.exe)
+**[Download Lightweight for Windows x64 (9.4 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.13/Netrix_0.3.0-beta.13_x64-lightweight-setup.exe)** · [Offline Full with WebView2 (305.5 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.13/Netrix_0.3.0-beta.13_x64-offline-full-setup.exe) · [Portable ZIP (10.0 MB)](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.13/Netrix_0.3.0-beta.13_x64-portable.zip)
 
-Choose **Lightweight** for most PCs. It uses the installed WebView2 runtime and downloads it from Microsoft if needed. Choose **Offline Full** for a disconnected PC. It includes the complete runtime. Both installers install the same Netrix application.
+Choose **Lightweight** for most PCs. It uses the installed WebView2 runtime or downloads it from Microsoft if needed. Choose **Offline Full** for a disconnected PC. Both installers contain the same application.
 
-Choose **Import SSH config** on the **Add your first host** screen to preview OpenSSH entries and select the hosts to save.
+Extract **Portable ZIP** to a writable folder on a PC with WebView2 Evergreen installed and open `Netrix.exe`. To move your workspace, close Netrix and copy the entire folder, including `Netrix.portable` and `Data`. Use the same master password on the next PC.
 
-On Windows 10 LTSC x64, Lightweight upgraded beta.11 with WebView2 present and downloaded WebView2 on a second machine where it was missing. Offline Full installed WebView2 and opened the workspace with the network disconnected. After restart, all three installations retained the test host and opened the Telegram community from About and Settings. Both Netrix installers are unsigned. [Release notes and checksums](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.12)
+On Windows 10 LTSC, Lightweight upgraded a beta.12 workspace and its Vault opened with the original password. Offline Full installed WebView2 and opened Netrix on a clean VM with no network adapter. Installed and Portable copies ran side by side with separate hosts and Vaults. The Portable workspace moved from P: to R: between two independently installed Windows 10 virtual machines with different user accounts. The saved SSH host, terminal font settings and Vault item were available with the original master password.
 
-| Installer | Bytes | SHA-256 |
+The Netrix executables and installers are unsigned. [Release notes](https://github.com/chighladze/netrix-releases/releases/tag/v0.3.0-beta.13).
+
+| Windows x64 download | Bytes | SHA-256 |
 | --- | ---: | --- |
-| Lightweight | 9,342,073 | `5b7cda0b88eacef3bbdeb32939606d7e4bf1738c6fe85bc3c81a0539c2e85180` |
-| Offline Full | 225,467,274 | `5c055927c6b10e1bd6fc1f89eed344435537298064b0ac43a36b4bc0f4d100eb` |
+| Lightweight | 9,350,018 | `3f157c37fb625da6cff03db17519d69c50946575a067682aba4ebfbf66b6a2b6` |
+| Offline Full | 305,518,698 | `7f5650b0bf3ec203a227cc293fcc0502a6052e84b8c632dd71b97b21c26fb56b` |
+| Portable ZIP | 9,956,736 | `0addcc441992d8e4a580a39eb8f8c119021f7d44839a672019b05987fa0a2ff2` |
 
-[Checksum manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.12/installer-hashes.sha256) · [Release metadata](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.12/release.json) · [All releases](https://github.com/chighladze/netrix-releases/releases)
+[Checksum manifest](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.13/installer-hashes.sha256) · [Release metadata](https://github.com/chighladze/netrix-releases/releases/download/v0.3.0-beta.13/release.json) · [All releases](https://github.com/chighladze/netrix-releases/releases)
 
-Choose the EXE under **Assets**. GitHub's automatically generated **Source code** ZIP/TAR archives contain this distribution repository's documentation, not the Netrix application or its installer. The complete application source and build/customization guides are available in [netrix-desktop](https://github.com/chighladze/netrix-desktop).
+Under **Assets**, select a named Netrix EXE or the **Portable ZIP**. GitHub’s **Source code** archives on this release contain the distribution repository. The application source and build guides are available in [netrix-desktop](https://github.com/chighladze/netrix-desktop).
 
 ## Verify a download
 
-In PowerShell, use the filename of the EXE you downloaded.
+In PowerShell, use the filename of the EXE or ZIP you downloaded.
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Netrix_0.3.0-beta.12_x64-lightweight-setup.exe'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Netrix_0.3.0-beta.13_x64-lightweight-setup.exe'
 ```
 
 Compare the result with `installer-hashes.sha256` from the same release. Read its notes for the exact signing and testing status. Unsigned beta builds are explicitly marked as prereleases and may show a Windows unknown-publisher warning. A checksum verifies the downloaded bytes; it is not a publisher signature.
